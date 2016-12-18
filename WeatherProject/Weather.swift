@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//import Alamofire
+import Alamofire
 
 class Weather {
     
@@ -21,6 +21,8 @@ class Weather {
     private var _weatherDescp: String!
     private var _temperature: String!
     private var _weatherIcon: String!
+    
+    private var _weatherUrl: String!
     
     var location: String {
         return _location
@@ -61,4 +63,22 @@ class Weather {
         return _weatherIcon
     }
     
+    var weatherUrl: String {
+        return _weatherUrl
+    }
+    
+    init(location: String, city: String) {
+        self._location = URL_CITY
+        self._weatherUrl = "\(URL_BASE)\(URL_CITY)\(URL_appId)\(API_KEY)"
+    }
+    
+    func downloadWeatherDetails(_completed: @escaping DownloadComplete) {
+        let url = _weatherUrl!
+        Alamofire.request(url).response { response in
+            
+        }
+    }
+    
 }
+
+

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -20,11 +21,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var humidityLbl: UILabel!
     @IBOutlet weak var windSpeedLbl: UILabel!
     
+    var weather: Weather!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-    
+        
+//        placeLbl.text = weather.location
+//        let img = 
         
     }
 
