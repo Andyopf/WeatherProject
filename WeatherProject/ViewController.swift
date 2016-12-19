@@ -27,16 +27,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         placeLbl.text = ""
-//        weatherIconImg.image = UIImage(named: weather.weatherIcon)
-//        let img =
-//        weather.downloadWeatherDetails { () -> () in
-//           self.UIUpdate()
-//        }
+        weather.downloadWeatherDetails {
+            self.UIUpdate()
+        }
+        
     }
     
-//    func UIUpdate() {
-//        self.placeLbl.text = "hi"
-//    }
-
+    func UIUpdate() {
+        dayIn7DayLbl.text = "5"
+    }
+    
 }
 

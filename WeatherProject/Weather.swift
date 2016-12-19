@@ -72,14 +72,14 @@ class Weather {
         self._weatherUrl = "\(URL_BASE)\(URL_CITY)\(URL_appId)\(API_KEY)"
     }
     
-//    func downloadWeatherDetails(completed: DownloadComplete) {
-//        let url = _weatherUrl!
-//        Alamofire.request(url).responseJSON { response in
-////            let result = response.result
-//            debugPrint(response)
-//        }
-//    }
-    
+    func downloadWeatherDetails(completed: @ escaping DownloadComplete) {
+        let url = weatherUrl
+        Alamofire.request(url).responseJSON { response in
+            let result = response.result
+            
+            print(response)
+        }
+    }
 }
 
 
