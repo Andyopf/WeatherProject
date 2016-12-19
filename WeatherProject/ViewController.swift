@@ -26,10 +26,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        placeLbl.text = weather.location
-//        let img = 
-        
+        placeLbl.text = ""
+//        weatherIconImg.image = UIImage(named: weather.weatherIcon)
+//        let img =
+//        weather.downloadWeatherDetails { () -> () in
+//           self.UIUpdate()
+//        }
     }
+    
+//    func UIUpdate() {
+//        self.placeLbl.text = "hi"
+//    }
 
 }
 
